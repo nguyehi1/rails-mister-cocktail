@@ -3,7 +3,6 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.search(params[:term])
-    redirect_to cocktail_path(@cocktail)
   end
 
   def show

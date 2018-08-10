@@ -5,7 +5,7 @@ class Cocktail < ApplicationRecord
   validates :name, presence: true, uniqueness: true, allow_blank: false
 
   def self.search(term)
-    if term
+    if term.present?
       where('name LIKE ?', "%#{term}%")
     else
       all
