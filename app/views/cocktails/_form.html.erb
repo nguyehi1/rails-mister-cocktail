@@ -1,0 +1,10 @@
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+
+  <%= f.label :image, "Picture" %><br>
+  <%= f.text_field :image, class: "form-control"%>
+  <br><br>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+<br>
+<!-- <%= link_to "<< Back to cocktails listing", cocktails_path %> -->

@@ -1,0 +1,30 @@
+<div class="wrapper-body">
+  <h4><%= @cocktail.name %></h4>
+
+  <div class="card-img">
+    <%= image_tag "#{@cocktail.image}", class: 'img-responsive', width: '400' %>
+  </div
+  <br>
+  <h5>Recipes: </h5>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @cocktail.doses.each do |dose| %>
+      <tr>
+        <td><%= dose.description %> of <%= dose.ingredient.name %> </td>
+        <td></td>
+        <td><%= link_to "Edit", edit_cocktail_path(@cocktail) %> |
+        <%= link_to "Delete", cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br><br>
+  <%= link_to "Adding new doses", new_cocktail_dose_path(@cocktail) %><br><br>
+  <!-- <%= link_to "<< Back to cocktails listing", cocktails_path %><br><br> -->
+  <br><br>
+</div>

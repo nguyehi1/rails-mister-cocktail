@@ -1,0 +1,27 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .site {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+.site-content {
+  min-height: calc(100vh - 170px);
+  // flex-grow: 1;
+}
+
+// .site {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+.wrapper-body {
+  padding: 0 30px;
+}
+
+body {
+  background-color: white;
+}

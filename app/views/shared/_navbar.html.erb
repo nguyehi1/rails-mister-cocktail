@@ -1,0 +1,28 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <div class="navbar-title"><h3>FloraCocktails</h3></div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <a href=""><%= link_to "Homepage", cocktails_path %></a>
+    <a class="navbar-wagon-item navbar-wagon-link">
+      <%= form_tag(cocktails_path, method: :get) do %>
+        <%= text_field_tag :term, params[:term] %>
+        <%= submit_tag 'Search', name: nil %>
+      <% end %>
+    </a>
+
+    <!-- Profile picture with dropdown list -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <img src="https://picsum.photos/200/300/?gravity=east" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

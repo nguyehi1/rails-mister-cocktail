@@ -1,0 +1,29 @@
+<%= render 'shared/banner' %>
+
+<div class="wrapper-body">
+
+  <h3>Enjoy your favorite cocktails of the season</h3>
+
+  <br>
+
+  <div class="container">
+    <div class="colomn">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card">
+
+            <div class="card-img">
+              <%= image_tag "#{cocktail.image}", class: 'img-responsive img-circle'%>
+            </div>
+
+            <div class="card-content">
+              <h5><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+              <p><%= link_to "Edit", edit_cocktail_path(cocktail) %> |
+              <%= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
